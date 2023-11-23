@@ -1,24 +1,31 @@
-﻿using StoresNetwork.ViewControllers;
+﻿using StoresNetwork.UI.ViewControllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StoresNetwork
+namespace StoresNetwork.UI.Views
 {
     internal class View
     {
-        string title;
+        protected string title;
         List<string> options;
         OptionIndex selectedOption;
         const string menuKeysInfo = "Переміщення - стрілки вверх/вниз, вибрати - Enter, повернутися - ESC";
-        public View(string title, List<string> options, OptionIndex selectedOption) { 
+        public View(string title, List<string> options, OptionIndex selectedOption)
+        {
             this.title = title;
             this.options = new List<string>();
             foreach (string option in options)
                 this.options.Add(option);
             this.selectedOption = selectedOption;
+        }
+        public View(string title)
+        {
+            this.title = title;
+            options = new List<string>();
+            selectedOption = new();
         }
         void Draw()
         {
@@ -28,7 +35,7 @@ namespace StoresNetwork
             DrawMenuKeysInfo();
             SetSelection();
         }
-        void DrawTitle()
+        protected void DrawTitle()
         {
             TextColor.BlueText($"*** {title} ***");
         }
@@ -47,7 +54,7 @@ namespace StoresNetwork
             Console.SetCursorPosition(0, options.Count + 2);
             TextColor.BlueText(menuKeysInfo);
         }
-        public ViewResult Show()
+        public virtual ViewResult Show()
         {
             Draw();
             ConsoleKey key;
@@ -112,7 +119,7 @@ namespace StoresNetwork
         }
         bool IsLastOption()
         {
-            return selectedOption.Index == options.Count-1;
+            return selectedOption.Index == options.Count - 1;
         }
         void GoNextOption()
         {

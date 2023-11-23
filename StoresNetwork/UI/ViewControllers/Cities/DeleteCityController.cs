@@ -1,20 +1,22 @@
-﻿using System;
+﻿using StoresNetwork.UI.Views.Cities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StoresNetwork.ViewControllers
+namespace StoresNetwork.UI.ViewControllers.Cities
 {
-    internal class InsertSelectController : ViewController
+    internal class DeleteCityController : ViewController
     {
+
         public override ViewController? ShowView()
         {
-            options = new List<string>() { "Додати", "Показати список" };
+            options = new List<string>();
             selectedOption = new();
-            view = new("INSERT/SELECT", options, selectedOption);
+            view = new DeleteCityView("Видалити місто");
             result = view.Show();
-            return HandleViewResult(new MainController());
+            return new DeleteUpdateCityController();
         }
 
         protected override ViewController? ControllerAction()

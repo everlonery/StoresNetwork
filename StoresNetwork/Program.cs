@@ -1,6 +1,4 @@
-﻿using StoresNetwork.ViewControllers;
-
-namespace StoresNetwork
+﻿namespace StoresNetwork
 {
     internal class Program
     {

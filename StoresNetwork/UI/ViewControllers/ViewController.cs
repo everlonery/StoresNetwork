@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StoresNetwork.UI.Views;
 
-namespace StoresNetwork.ViewControllers
+namespace StoresNetwork.UI.ViewControllers
 {
     internal abstract class ViewController
     {
         protected View? view;
         protected List<string>? options;
         protected OptionIndex? selectedOption;
-        protected ViewResult? result;        
+        protected ViewResult? result;
         public abstract ViewController? ShowView();
         protected abstract ViewController? ControllerAction();
         protected ViewController? HandleViewResult(ViewController? parent = null)

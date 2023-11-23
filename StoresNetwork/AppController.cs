@@ -1,4 +1,4 @@
-﻿using StoresNetwork.ViewControllers;
+﻿using StoresNetwork.UI.ViewControllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;

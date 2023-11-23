@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StoresNetwork.ViewControllers
+namespace StoresNetwork.UI.ViewControllers
 {
-    internal class InsertSelectStoresController : InsertSelectController
+    internal class InsertSelectStoreController : InsertSelectController
     {
     }
 }

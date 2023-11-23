@@ -1,4 +1,4 @@
-﻿namespace StoresNetwork
+﻿namespace StoresNetwork.UI
 {
     enum ViewResult
     {
