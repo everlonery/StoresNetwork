@@ -12,7 +12,7 @@ namespace StoresNetwork.Database
         private const string ConnectionString = "Data Source=WS-000030129;Initial Catalog=BikeStores;Persist Security Info=False;User ID=sa;Password=12345678";
         public static SqlConnection GetConnection() => new(ConnectionString);
 
-        #region Cities
+        #region Cities 
 
         #endregion
     }
