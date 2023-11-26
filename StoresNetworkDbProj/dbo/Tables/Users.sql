@@ -10,6 +10,6 @@
     [Phone]          NVARCHAR (16) NULL,
     [IsActive]       BIT           NULL,
     CONSTRAINT [PK_Worker] PRIMARY KEY CLUSTERED ([UserId] ASC),
-    CONSTRAINT [FK_Worker_Roles] FOREIGN KEY ([RoleId]) REFERENCES [dbo].[Roles] ([RoleId])
+    CONSTRAINT [FK_Worker_Roles] FOREIGN KEY ([RoleId]) REFERENCES [dbo].[Roles] ([RoleId]) ON DELETE SET NULL
 );
 

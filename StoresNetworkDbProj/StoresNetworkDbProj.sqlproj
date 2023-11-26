@@ -62,6 +62,7 @@
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\StoredProcedures" />
     <Folder Include="dbo\StoredProcedures\Cities" />
+    <Folder Include="dbo\StoredProcedures\Roles" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Cities.sql" />
@@ -75,5 +76,10 @@
     <Build Include="dbo\StoredProcedures\Cities\sp_Cities_Delete.sql" />
     <Build Include="dbo\StoredProcedures\Cities\sp_Cities_SelectRow.sql" />
     <Build Include="dbo\StoredProcedures\Cities\sp_Cities_UpdateName.sql" />
+    <Build Include="dbo\StoredProcedures\Roles\sp_Roles_Delete.sql" />
+    <Build Include="dbo\StoredProcedures\Roles\sp_Roles_Insert.sql" />
+    <Build Include="dbo\StoredProcedures\Roles\sp_Roles_SelectAll.sql" />
+    <Build Include="dbo\StoredProcedures\Roles\sp_Roles_SelectRow.sql" />
+    <Build Include="dbo\StoredProcedures\Roles\sp_Roles_UpdateName.sql" />
   </ItemGroup>
 </Project>
