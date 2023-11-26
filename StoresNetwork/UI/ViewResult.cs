@@ -3,6 +3,6 @@
     enum ViewResult
     {
         Enter,
-        Return,
+        Return
     }
 }

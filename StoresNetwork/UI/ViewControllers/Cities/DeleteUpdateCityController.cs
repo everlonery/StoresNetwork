@@ -9,7 +9,7 @@ namespace StoresNetwork.UI.ViewControllers.Cities
 {
     internal class DeleteUpdateCityController : DeleteUpdateController
     {
-        public DeleteUpdateCityController()
+        public DeleteUpdateCityController(int rowId) : base(rowId)
         {
             parent = new CitiesController();
         }
@@ -20,9 +20,9 @@ namespace StoresNetwork.UI.ViewControllers.Cities
                 switch (selectedOption.Index)
                 {
                     case 0:
-                        return new DeleteCityController();
+                        return new DeleteCityController(rowId);
                     case 1:
-                        return new UpdateCityController();
+                        return new UpdateCityController(rowId);
                 }
             }
             return null;

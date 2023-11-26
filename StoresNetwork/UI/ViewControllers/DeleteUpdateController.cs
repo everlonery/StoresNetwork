@@ -9,9 +9,11 @@ namespace StoresNetwork.UI.ViewControllers
     internal class DeleteUpdateController : ViewController
     {
         protected ViewController parent;
-        public DeleteUpdateController()
+        protected int rowId;
+        public DeleteUpdateController(int rowId)
         {
             parent = new MainController();
+            this.rowId = rowId;
         }
         public override ViewController? ShowView()
         {

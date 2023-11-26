@@ -5,19 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StoresNetwork.UI.Views.Cities
+namespace StoresNetwork.UI.Views.Cities.Fields
 {
-    internal class AddCityView : View
+    internal class CityNameView : View
     {
         City city;
-        public AddCityView(string title, City city) : base(title) {
+        public CityNameView(string title, City city) : base(title) {
         this.city = city;
         }
         public override ViewResult Show()
         {
             Clear();
             DrawTitle();
-            Console.WriteLine("\nВведіть назву: ");
+            Console.WriteLine("\nВведіть нову назву: ");
             city.Name = Console.ReadLine();
             return ViewResult.Return;
         }

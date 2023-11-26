@@ -1,4 +1,7 @@
-﻿using StoresNetwork.UI.Views.Cities;
+﻿using StoresNetwork.Database.DataControllers;
+using StoresNetwork.Database.Models;
+using StoresNetwork.UI.ViewControllers.Cities.Fileds;
+using StoresNetwork.UI.Views.Cities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,18 +12,25 @@ namespace StoresNetwork.UI.ViewControllers.Cities
 {
     internal class UpdateCityController : ViewController
     {
+        public int cityId;
+        public UpdateCityController(int cityId)
+        {
+            this.cityId = cityId;
+        }
         public override ViewController? ShowView()
         {
             options = new List<string>();
             selectedOption = new();
-            view = new UpdateCityView("Змінити місто");
+            foreach (var city in City.PropsList())
+                options.Add(city.ToString());
+            view = new("Поля", options, selectedOption);
             result = view.Show();
-            return new DeleteUpdateCityController();
+            return HandleViewResult(new CitiesController());
         }
 
         protected override ViewController? ControllerAction()
         {
-            throw new NotImplementedException();
+            return new CityNameController(cityId);
         }
     }
 }

@@ -11,8 +11,12 @@ namespace StoresNetwork.UI.ViewControllers
     {
         protected View? view;
         protected List<string>? options;
-        protected OptionIndex? selectedOption;
+        protected OptionIndex selectedOption;
         protected ViewResult? result;
+        protected ViewController() 
+        {
+            selectedOption = new();
+        }
         public abstract ViewController? ShowView();
         protected abstract ViewController? ControllerAction();
         protected ViewController? HandleViewResult(ViewController? parent = null)
