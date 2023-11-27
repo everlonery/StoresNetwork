@@ -63,6 +63,7 @@
     <Folder Include="dbo\StoredProcedures" />
     <Folder Include="dbo\StoredProcedures\Cities" />
     <Folder Include="dbo\StoredProcedures\Roles" />
+    <Folder Include="dbo\StoredProcedures\Categories" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Cities.sql" />
@@ -74,12 +75,17 @@
     <Build Include="dbo\StoredProcedures\Cities\sp_Cities_SelectAll.sql" />
     <Build Include="dbo\StoredProcedures\Cities\sp_Cities_Insert.sql" />
     <Build Include="dbo\StoredProcedures\Cities\sp_Cities_Delete.sql" />
-    <Build Include="dbo\StoredProcedures\Cities\sp_Cities_SelectRow.sql" />
     <Build Include="dbo\StoredProcedures\Cities\sp_Cities_UpdateName.sql" />
     <Build Include="dbo\StoredProcedures\Roles\sp_Roles_Delete.sql" />
     <Build Include="dbo\StoredProcedures\Roles\sp_Roles_Insert.sql" />
     <Build Include="dbo\StoredProcedures\Roles\sp_Roles_SelectAll.sql" />
     <Build Include="dbo\StoredProcedures\Roles\sp_Roles_SelectRow.sql" />
     <Build Include="dbo\StoredProcedures\Roles\sp_Roles_UpdateName.sql" />
+    <Build Include="dbo\StoredProcedures\Categories\sp_Categories_Delete.sql" />
+    <Build Include="dbo\StoredProcedures\Categories\sp_Categories_Insert.sql" />
+    <Build Include="dbo\StoredProcedures\Categories\sp_Categories_SelectAll.sql" />
+    <Build Include="dbo\StoredProcedures\Categories\sp_Categories_SelectParent.sql" />
+    <Build Include="dbo\StoredProcedures\Categories\sp_Categories_UpdateName.sql" />
+    <Build Include="dbo\StoredProcedures\Categories\sp_Categories_UpdateParent.sql" />
   </ItemGroup>
 </Project>

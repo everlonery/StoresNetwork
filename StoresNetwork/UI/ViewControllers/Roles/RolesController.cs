@@ -26,7 +26,7 @@ namespace StoresNetwork.UI.ViewControllers.Roles
             selectedOption = new();
             view = new("Посади", options, selectedOption);
             result = view.Show();
-            return HandleViewResult(new InsertSelectRoleController());
+            return HandleViewResult(new MainController());
         }
 
         protected override ViewController? ControllerAction()

@@ -24,7 +24,7 @@ namespace StoresNetwork.UI.ViewControllers.Roles
             result = view.Show();
             RolesDataController dataController = new();
             dataController.InsertRole(role);
-            return new InsertSelectRoleController();
+            return new RolesController();
         }
 
         protected override ViewController? ControllerAction()

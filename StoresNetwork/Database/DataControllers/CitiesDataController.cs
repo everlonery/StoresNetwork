@@ -23,19 +23,6 @@ namespace StoresNetwork.Database.DataControllers
                 return rows;
             }
         }
-        public City SelectCity(int cityId)
-        {
-            using (var connection = DatabaseConnection.GetConnection())
-            {
-                connection.Open();
-                var rows = connection.Query<City>(
-                    DatabaseConnection.SelectCity,
-                    new { CityId = cityId},
-                    commandType: CommandType.StoredProcedure
-                    );
-                return rows.First();
-            }
-        }
         public void InsertCity(City city)
         {
             using(var connection = DatabaseConnection.GetConnection())

@@ -26,7 +26,7 @@ namespace StoresNetwork.UI.ViewControllers.Cities
             selectedOption = new();
             view = new("Міста", options, selectedOption);
             result = view.Show();
-            return HandleViewResult(new InsertSelectCityController());
+            return HandleViewResult(new MainController());
         }
 
         protected override ViewController? ControllerAction()

@@ -1,7 +1,7 @@
 ﻿using StoresNetwork.Database.DataControllers;
 using StoresNetwork.Database.Models;
-using StoresNetwork.UI.ViewControllers.Roles;
-using StoresNetwork.UI.Views;
+using StoresNetwork.UI.ViewControllers.Cities;
+using StoresNetwork.UI.Views.Categories;
 using StoresNetwork.UI.Views.Cities;
 using System;
 using System.Collections.Generic;
@@ -9,21 +9,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StoresNetwork.UI.ViewControllers.Cities
+namespace StoresNetwork.UI.ViewControllers.Categories
 {
-    internal class AddCityController : ViewController
+    internal class AddCategoryController : ViewController
     {
-        City? city;
+        Category? category;
         public override ViewController? ShowView()
-        {   
-            city = new City();
+        {
+            category = new Category();
             options = new List<string>();
             selectedOption = new();
-            view = new AddCityView("Додати місто", city);
+            view = new AddCategoryView("Додати категорію", category);
             result = view.Show();
-            CitiesDataController dataController = new();
-            dataController.InsertCity(city);
-            return new CitiesController();
+            CategoriesDataController dataController = new();
+            dataController.InsertCategory(category);
+            return new CategoriesController();
         }
 
         protected override ViewController? ControllerAction()

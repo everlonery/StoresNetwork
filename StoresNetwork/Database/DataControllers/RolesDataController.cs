@@ -23,19 +23,6 @@ namespace StoresNetwork.Database.DataControllers
                 return rows;
             }
         }
-        public Role SelectRole(int roleId)
-        {
-            using (var connection = DatabaseConnection.GetConnection())
-            {
-                connection.Open();
-                var rows = connection.Query<Role>(
-                    DatabaseConnection.SelectRole,
-                    new { RoleId = roleId },
-                    commandType: CommandType.StoredProcedure
-                    );
-                return rows.First();
-            }
-        }
         public void InsertRole(Role role)
         {
             using (var connection = DatabaseConnection.GetConnection())
