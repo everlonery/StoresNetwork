@@ -62,6 +62,18 @@ namespace StoresNetwork.Database.DataControllers
                     );
             }
         }
+        public void DeleteParent(int categoryId)
+        {
+            using (var connection = DatabaseConnection.GetConnection())
+            {
+                connection.Open();
+                var rows = connection.Execute(
+                    DatabaseConnection.DeleteParent,
+                    new { CategoryId = categoryId },
+                    commandType: CommandType.StoredProcedure
+                    );
+            }
+        }
         public void UpdateCategoryName(int categoryId, string? name)
         {
             using (var connection = DatabaseConnection.GetConnection())
@@ -74,6 +86,7 @@ namespace StoresNetwork.Database.DataControllers
                     );
             }
         }
+
         public void UpdateCategoryParent(int categoryId, int parentId)
         {
             using (var connection = DatabaseConnection.GetConnection())
@@ -84,6 +97,20 @@ namespace StoresNetwork.Database.DataControllers
                     new { CategoryId = categoryId, NewParentId = parentId },
                     commandType: CommandType.StoredProcedure
                     );
+            }
+        }
+
+        public IEnumerable<Category> GetOtherCategories(int categoryId)
+        {
+            using (var connection = DatabaseConnection.GetConnection())
+            {
+                connection.Open();
+                var rows = connection.Query<Category>(
+                    DatabaseConnection.OtherCategories,
+                    new { CategoryId = categoryId },
+                    commandType: CommandType.StoredProcedure
+                    );
+                return rows;
             }
         }
     }

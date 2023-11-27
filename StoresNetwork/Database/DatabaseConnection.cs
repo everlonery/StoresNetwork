@@ -30,8 +30,10 @@ namespace StoresNetwork.Database
         public const string SelectCategoryParent = "sp_Categories_SelectParent";
         public const string InsertCategory = "sp_Categories_Insert";
         public const string DeleteCategory = "sp_Categories_Delete";
+        public const string DeleteParent = "sp_Categories_DeleteParent";
         public const string UpdateCategoryName = "sp_Categories_UpdateName";
         public const string UpdateCategoryParent = "sp_Categories_UpdateParent";
+        public const string OtherCategories = "sp_Categories_OtherCategories";
         #endregion
     }
 }

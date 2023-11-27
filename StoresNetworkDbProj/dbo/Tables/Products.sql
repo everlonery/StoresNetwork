@@ -7,6 +7,6 @@
     [PicturePath] NVARCHAR (100) NULL,
     [CategoryId]  INT            NULL,
     CONSTRAINT [PK_Product] PRIMARY KEY CLUSTERED ([ProductId] ASC),
-    CONSTRAINT [FK_Products_Categories] FOREIGN KEY ([CategoryId]) REFERENCES [dbo].[Categories] ([CategoryId])
+    CONSTRAINT [FK_Products_Categories] FOREIGN KEY ([CategoryId]) REFERENCES [dbo].[Categories] ([CategoryId]) ON DELETE SET NULL
 );
 

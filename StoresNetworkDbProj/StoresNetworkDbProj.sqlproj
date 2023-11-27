@@ -86,6 +86,8 @@
     <Build Include="dbo\StoredProcedures\Categories\sp_Categories_SelectAll.sql" />
     <Build Include="dbo\StoredProcedures\Categories\sp_Categories_SelectParent.sql" />
     <Build Include="dbo\StoredProcedures\Categories\sp_Categories_UpdateName.sql" />
+    <Build Include="dbo\StoredProcedures\Categories\sp_Categories_DeleteParent.sql" />
+    <Build Include="dbo\StoredProcedures\Categories\sp_Categories_OtherCategories.sql" />
     <Build Include="dbo\StoredProcedures\Categories\sp_Categories_UpdateParent.sql" />
   </ItemGroup>
 </Project>
