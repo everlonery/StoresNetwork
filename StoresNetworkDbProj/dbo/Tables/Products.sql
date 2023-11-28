@@ -2,7 +2,6 @@
     [ProductId]   INT            IDENTITY (1, 1) NOT NULL,
     [Name]        NVARCHAR (50)  NULL,
     [Price]       MONEY          NULL,
-    [IsForAdults] BIT            NULL,
     [IsExcise]    BIT            NULL,
     [PicturePath] NVARCHAR (100) NULL,
     [CategoryId]  INT            NULL,

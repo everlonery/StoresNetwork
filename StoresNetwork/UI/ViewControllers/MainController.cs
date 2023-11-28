@@ -1,5 +1,6 @@
 ﻿using StoresNetwork.UI.ViewControllers.Categories;
 using StoresNetwork.UI.ViewControllers.Cities;
+using StoresNetwork.UI.ViewControllers.Products;
 using StoresNetwork.UI.ViewControllers.Roles;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,7 @@ namespace StoresNetwork.UI.ViewControllers
     {
         public override ViewController? ShowView()
         {
-            options = new List<string>() { "Міста", "Посади", "Категорії" };
+            options = new List<string>() { "Міста", "Посади", "Категорії", "Продукти"};
             selectedOption = new();
             view = new("Головне меню", options, selectedOption);
             result = view.Show();
@@ -31,6 +32,8 @@ namespace StoresNetwork.UI.ViewControllers
                         return new InsertSelectRoleController();
                     case 2:
                         return new InsertSelectCategoryController();
+                    case 3:
+                        return new InsertSelectProductController();
                 }
             }
             return null;

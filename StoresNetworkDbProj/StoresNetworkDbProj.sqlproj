@@ -64,6 +64,7 @@
     <Folder Include="dbo\StoredProcedures\Cities" />
     <Folder Include="dbo\StoredProcedures\Roles" />
     <Folder Include="dbo\StoredProcedures\Categories" />
+    <Folder Include="dbo\StoredProcedures\Products" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Cities.sql" />
@@ -89,5 +90,10 @@
     <Build Include="dbo\StoredProcedures\Categories\sp_Categories_DeleteParent.sql" />
     <Build Include="dbo\StoredProcedures\Categories\sp_Categories_OtherCategories.sql" />
     <Build Include="dbo\StoredProcedures\Categories\sp_Categories_UpdateParent.sql" />
+    <Build Include="dbo\StoredProcedures\Products\sp_Products_Delete.sql" />
+    <Build Include="dbo\StoredProcedures\Products\sp_Products_SelectAll.sql" />
+    <Build Include="dbo\StoredProcedures\Products\sp_Products_Insert.sql" />
+    <Build Include="dbo\StoredProcedures\Products\sp_Products_UpdateName.sql" />
+    <Build Include="dbo\StoredProcedures\Products\sp_Products_UpdatePrice.sql" />
   </ItemGroup>
 </Project>

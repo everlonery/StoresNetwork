@@ -35,5 +35,12 @@ namespace StoresNetwork.Database
         public const string UpdateCategoryParent = "sp_Categories_UpdateParent";
         public const string OtherCategories = "sp_Categories_OtherCategories";
         #endregion
+        #region Products
+        public const string SelectAllProducts = "sp_Products_SelectAll";
+        public const string DeleteProduct = "sp_Products_Delete";
+        public const string InsertProduct = "sp_Products_Insert";
+        public const string UpdateProductName = "sp_Products_UpdateName";
+        public const string UpdateProductPrice = "sp_Products_UpdatePrice";
+        #endregion
     }
 }
