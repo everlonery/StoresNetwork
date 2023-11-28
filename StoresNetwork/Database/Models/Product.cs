@@ -29,6 +29,6 @@ namespace StoresNetwork.Database.Models
                 sb.Append($"Категорія: {category.Name} ");
             return sb.ToString();
         }
-        public static List<string> PropsList() => new List<string>() { "Назва продукту", "Ціна", "Чи акцизний?","Шлях до зображення","Категорія"};
+        public static List<string> PropsList() => new List<string>() { "Назва продукту", "Ціна"};
     }
 }
